@@ -16,10 +16,22 @@ export const ShowData = () => {
 
     return(
         <div>
-            Tela ShowData <b>{state.user.name}</b>
+            {/* Tela ShowData <b>{state.user.name}</b> */}
+            {/* <button onClick={handleChangeName}>Trocar nome</button> */}
 
-            <button onClick={handleChangeName}>Trocar nome</button>
-            <br /><br /><br />
+            <h3>Tele ShowData (Tema: {state.theme.status})</h3>
+            <br /><br />
+
+            {
+                state.user.name &&
+                <>
+                    Meu nome é: {state.user.name} <br />
+                    Eu tenho: {state.user.age} <br /><br />
+                </>
+            }
+
+            {!state.user.name && 'Não há informações'} <br /> <br />
+
             <button><Link to="/">Ir para SignUp</Link></button>
         </div>
     )

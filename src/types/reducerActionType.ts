@@ -1,7 +1,7 @@
 import { type } from "os";
 
 export type reducerActionType = {
-  type: 'CHANGE_NAME' | 'CHANGE_AGE',
+  type: string
   payload: {
     [key: string]: any
   }
